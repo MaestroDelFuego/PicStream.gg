@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img,
+  .card video {
+    width: 100%;
+    height: auto;
+  }
+
+  .card .content {
+    padding: 10px;
+  }
+
+  .card .file-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card .file-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .card .file-link:hover {
+    text-decoration: underline;
+  }

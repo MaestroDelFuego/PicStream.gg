@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="<%= color %>">
+  <meta property="og:title" content="<%= title %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <% if (isImage) { %>
+    <meta property="og:image" content="<%= fileUrl %>" />
+  <% } else if (isVideo) { %>
+    <meta property="og:video" content="<%= fileUrl %>" />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="640" />
+    <meta property="og:video:height" content="360" />
+  <% } %>
+  <meta name="twitter:card" content="summary_large_image">
+  <title><%= title %></title>
+</head>
+<style>
+  /* General Body Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fb;  /* Light gray background */
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading Styles */
+h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin: 30px 0;
+  font-weight: 700;
+}
+
+/* Image and Video Styles */
+img, video {
+  max-width: 90%;   /* Responsive media size */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-top: 20px;
+}
+
+/* Footer Styles */
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+}
+
+.footer a {
+  color: #00aa00;  /* Green link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hover Effect for the Footer Link */
+.footer a:hover {
+  text-decoration: underline;
+  color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  img, video {
+    max-width: 100%; /* Make media fill the width on small screens */
+  }
+}
+</style>
+<body>
+  <h1><%= title %></h1>
+  <% if (isImage) { %>
+    <img src="<%= fileUrl %>" style="max-width: 100%;" />
+  <% } else if (isVideo) { %>
+    <video src="<%= fileUrl %>" controls style="max-width: 100%;"></video>
+  <% } %>
+</body>
+</html>
