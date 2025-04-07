@@ -17,12 +17,6 @@ The app provides a simple and efficient way to upload and share media without re
 
 ---
 
-## Demo
-
-[Click here to view the app in action!](#)
-
----
-
 ## Prerequisites
 
 Before using or deploying **PicStream**, ensure that you have the following software installed:
